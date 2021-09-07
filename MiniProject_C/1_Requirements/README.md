@@ -28,6 +28,7 @@ A person can carry out the following works
 * More transaction activitis can be added and make it user friendly.
 
 ### Threats
-* 
+* If user enters a wrong input value then it can't be revert back, i.e can"t go to previous step and edit the details, he/she need to clear all and then again enter the correct     values
+* Data breach can occur as no security process is available
 
 
