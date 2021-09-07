@@ -12,4 +12,4 @@
 
  | Code Inspector | |
  |--- | --- |
- | ![Inspector] (https://www.code-inspector.com/project/27866/score/svg)||
+ |![](https://www.code-inspector.com/project/27866/score/svg) ![](https://www.code-inspector.com/project/27866/status/svg)||
