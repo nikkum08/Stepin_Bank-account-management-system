@@ -31,4 +31,20 @@ A person can carry out the following works
 * If user enters a wrong input value then it can't be revert back, i.e can"t go to previous step and edit the details, he/she need to clear all and then again enter the correct     values
 * Data breach can occur as no security process is available
 
+## 4 W's and 1 H
+
+### Who
+* Anyone who want to carry out bank work from the home by providing details.
+### What
+* In this project the user is able to access Online bank account management system for creating new account, check and update details of an existing account, view and manage         transaction, deposit and withdraw money.
+### When
+* Whenever the bank work needd to be done according to requirement.
+### Why
+*  It will Reduced manual work as most of the work done by computer. As all the manual work will be done automatically so it will increase work speed and reduce time consumption      to complete any bank related work.
+### How
+A person can carry out the following works
+* Create new account – To create a new account by taking information from the user.
+* Cash Deposit – To Deposit amount in an exixting account
+* Cash withdrawal – To Withdraw amount
+* Account information – It will display all informations of an existing accounts
 
