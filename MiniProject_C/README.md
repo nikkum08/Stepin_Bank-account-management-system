@@ -10,3 +10,6 @@
 * Log out : Used to log out from the main 
 * Clearing the output screen and display available options again.
 
+ | Code Inspector | |
+ |--- | --- |
+ | ![Inspector] (https://www.code-inspector.com/project/27866/score/svg)||
