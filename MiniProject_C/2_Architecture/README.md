@@ -1,8 +1,5 @@
 # Architecture
 
-* Add UML Diagrams
-* For information about UML Diagrams refer: [UML Diagrams](https://www.uml-diagrams.org/uml-25-diagrams.html)
-## Tools 
-* [Draw.io](https://app.diagrams.net/)
-* [Creately](https://app.creately.com/diagram/create)
-* or any other free tools
+* Behaviour diagram of the proposed system
+![image](https://user-images.githubusercontent.com/48732301/132376316-15545a93-504a-483e-acfe-8bd656007c66.png)
+
