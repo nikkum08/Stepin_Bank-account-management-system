@@ -1,2 +1,0 @@
-## Doxygen based documentation
-
