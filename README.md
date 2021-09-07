@@ -1,0 +1,2 @@
+# Stepin_Bank-account-management-system
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/295238e8cd294d3bb7b3e95f2f0876f7)](https://app.codacy.com/gh/nikkum08/Stepin_Bank-account-management-system?utm_source=github.com&utm_medium=referral&utm_content=nikkum08/Stepin_Bank-account-management-system&utm_campaign=Badge_Grade_Settings)
