@@ -1,112 +1,191 @@
-#include <calculator_operations.h>
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
 
-/* Status of the operation requested */
-#define VALID   (1)
-#define INVALID (0)
-
-/* Calculator operation requested by user*/
-unsigned int calculator_operation = 0;
-
-/* Operands on which calculation is performed */
-int calculator_operand1 = 0;
-int calculator_operand2 = 0;
-
-/* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, EXIT };
-
-/* Display the menu of operations supported */
-void calculator_menu(void);
-/* Verifies the requested operations validity */
-int valid_operation(int operation);
-
-
-/* Start of the application */
-int main(int argc, char *argv[])
+struct acc_type
 {
-    printf("\n****Calculator****\n");
+     char bank_name[20];
+     char bank_branch[20];
+     char acc_holder_name[30];
+     int acc_number;
+     char acc_holder_address[100];
+     float available_balance;     
+};
+struct acc_type account[20];
+
+
+int num_acc;
+
+void Create_new_account();
+void Cash_Deposit();
+void Cash_withdrawl();
+void Account_information();
+void Log_out();
+void display_options();
+
+int main()
+{
+    char option;
+    num_acc=0;
     while(1)
     {
-        calculator_menu();
+     printf("\n Welcome to Smart Bank Application \n");
+
+       display_options();
+       printf("Please enter any options (1/2/3/4/5/6) ");
+       printf("to continue : ");
+
+        option = getch();
+        printf("%c \n", option);
+        switch(option)
+        {
+          case '1': Create_new_account();
+                    break;
+          case '2': Cash_Deposit();
+                    break;
+          case '3': Cash_withdrawl();
+                    break;
+          case '4': Account_information();
+                    break;
+          case '5': return 0;
+          case '6': system("cls");
+                    break;
+          default : system("cls");
+                    printf("Please enter one of the options");
+                    printf("(1/2/3/4/5/6) to continue \n ");
+                    break;
+        }
     }
+    return 0;
 }
 
-void calculator_menu(void)
+void display_options()
 {
-    printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit");
-    printf("\n\tEnter your choice\n");
-   
-     __fpurge(stdin);
-    scanf("%d", &calculator_operation);
-
-    if(EXIT == calculator_operation)
-    {
-        printf("\nThank you. Exiting the Application\n");
-        exit(0);
-    }
-
-    if(INVALID != valid_operation(calculator_operation))
-    {
-        printf("\n\tEnter your Numbers with space between them\n");
-        __fpurge(stdin);
-        scanf("%d %d", &calculator_operand1, &calculator_operand2);
-    }
-    else
-    {
-        printf("\n\t---Wrong choice---\nEnter to continue\n");
-        __fpurge(stdin);
-        getchar();
-        return;
-        
-    }
-    switch(calculator_operation)
-    {
-        case ADD:
-            printf("\n\t%d + %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            add(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case SUBTRACT:
-            printf("\n\t%d - %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            subtract(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case MULTIPLY:
-            printf("\n\t%d * %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            multiply(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case DIVIDE:
-            printf("\n\t%d / %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            divide(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case 5:
-            exit(0);
-            break;
-        default:
-            printf("\n\t---It should never come here---\n");
-    }
+    printf("\n1. Create new account \n");
+    printf("2. Cash Deposit \n");
+    printf("3. Cash withdrawl \n");
+    printf("4. Account information \n");
+    printf("5. Log out \n");
+    printf("6. Clear the screen and display available ");
+    printf("options \n\n");
 }
 
-int valid_operation(int operation)
+
+void Create_new_account()
 {
-    /* Check if the operation is a valid operation */
-    return ((ADD <= operation) && (EXIT >= operation)) ? VALID: INVALID;
+   char bank_name[20];
+   char bank_branch[20];
+   char acc_holder_name[30];
+   int acc_number;
+   char acc_holder_address[100];
+   float available_balance = 0;
+   fflush(stdin);     
+   printf("\nEnter the bank name              : ");
+   scanf("%s", &bank_name);
+   printf("\nEnter the bank branch            : ");
+   scanf("%s", &bank_branch);
+   printf("\nEnter the account holder name    : ");
+   scanf("%s", &acc_holder_name);
+   printf("\nEnter the account number(1 to 10): ");
+   scanf("%d", &acc_number);
+   printf("\nEnter the account holder address : ");
+   scanf("%s", &acc_holder_address);
+
+   strcpy(account[acc_number-1].bank_name,bank_name);
+   strcpy(account[acc_number-1].bank_branch,bank_branch);
+   strcpy(account[acc_number-1].acc_holder_name,
+   acc_holder_name);
+   account[acc_number-1].acc_number=acc_number;
+   strcpy(account[acc_number-1].acc_holder_address,
+   acc_holder_address);
+   account[acc_number-1].available_balance=available_balance;
+
+   printf("\nAccount has been created successfully \n\n");
+   printf("Bank name              : %s \n" , 
+   account[acc_number-1].bank_name);
+   printf("Bank branch            : %s \n" , 
+   account[acc_number-1].bank_branch);
+   printf("Account holder name    : %s \n" , 
+   account[acc_number-1].acc_holder_name);
+   printf("Account number         : %d \n" , 
+   account[acc_number-1].acc_number);
+   printf("Account holder address : %s \n" , 
+   account[acc_number-1].acc_holder_address);
+   printf("Available balance      : %f \n" , 
+   account[acc_number-1].available_balance);
+
+   num_acc++;
+
+}
+
+// Displaying account informations
+
+void Account_information()
+{
+     register int num_acc = 0;
+     while(strlen(account[num_acc].bank_name)>0)
+     {
+         printf("\nBank name                : %s \n" , 
+         account[num_acc].bank_name);
+         printf("Bank branch              : %s \n" , 
+         account[num_acc].bank_branch);
+         printf("Account holder name      : %s \n" , 
+         account[num_acc].acc_holder_name);
+         printf("Account number           : %d \n" , 
+         account[num_acc].acc_number);
+         printf("Account holder address   : %s \n" , 
+         account[num_acc].acc_holder_address);
+         printf("Available balance        : %f \n\n" , 
+         account[num_acc].available_balance);
+         num_acc++;
+     }
+}
+
+// Function to deposit amount in an account
+
+void Cash_Deposit()
+{
+   auto int acc_no;
+   float add_money;
+
+   printf("Enter account number you want to deposit money:");
+   scanf("%d",&acc_no);
+   printf("\nThe current balance for account %d is %f \n", 
+   acc_no, account[acc_no-1].available_balance);
+   printf("\nEnter money you want to deposit :  ");
+   scanf("%f",&add_money);
+
+   while (acc_no=account[acc_no-1].acc_number)
+   {
+         account[acc_no-1].available_balance=
+         account[acc_no-1].available_balance+add_money;
+         printf("\nThe New balance for account %d is %f \n", 
+         acc_no, account[acc_no-1].available_balance);
+         break; 
+   }acc_no++;
+}
+
+// Function to withdraw amount from an account
+
+void Cash_withdrawl()
+{
+   auto int acc_no;
+   float withdraw_money;
+
+   printf("Enter account number you want to withdraw money:");
+   scanf("%d",&acc_no);
+   printf("\nThe current balance for account %d is %f \n", 
+   acc_no, account[acc_no-1].available_balance);
+   printf("\nEnter money you want to withdraw from account ");
+   scanf("%f",&withdraw_money);
+
+   while (acc_no=account[acc_no-1].acc_number)
+   {
+         account[acc_no-1].available_balance=
+         account[acc_no-1].available_balance-withdraw_money;
+         printf("\nThe New balance for account %d is %f \n", 
+         acc_no, account[acc_no-1].available_balance);
+         break; 
+   }acc_no++;
 }
