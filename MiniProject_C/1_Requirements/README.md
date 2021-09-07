@@ -49,7 +49,15 @@ A person can carry out the following works
 * Account information – It will display all informations of an existing accounts
 
 ## High Level Requirements
-  |ID |DESCRIPTION |CATEGORY |
-  |---|---|---|
+  |ID |DESCRIPTION |
+  |---|---|
+  |HR01 | User need to select the operation be performed from the options provided |
+  |HR01 | For creating account individual details need to be entered |
   
+  
+  ## Low Level Requirements 
+  |ID |DESCRIPTION |
+  |---|---|
+  |HR01-LR01 | Create account, Cash deposit, Cash withdraw, account information|
+  |HR02-LR01 | Enter bank name, branch name, account holder name, account number, account holder address |
 
