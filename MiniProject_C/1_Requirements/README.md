@@ -52,12 +52,14 @@ A person can carry out the following works
   |ID |DESCRIPTION |
   |---|---|
   |HR01 | User need to select the operation be performed from the options provided |
-  |HR01 | For creating account individual details need to be entered |
   
   
   ## Low Level Requirements 
   |ID |DESCRIPTION |
   |---|---|
   |HR01-LR01 | Create account, Cash deposit, Cash withdraw, account information|
-  |HR02-LR01 | Enter bank name, branch name, account holder name, account number, account holder address |
-
+  |HR01-LR02 | To create account :  Enter bank name, branch name, account holder name, account number, account holder address |
+  |HR01-LR03 | To deposite cash : Enter the account number in which money is to be credited, enter amount to credit |
+  |HR01-LR04 | To withdraw money :  Enter the account number from which money is to be withdrawn, enter amount to withdraw |
+  |HR01-LR05 | Information of existing account |
+  |HR01-LR06 | Log our and clear the screen |
