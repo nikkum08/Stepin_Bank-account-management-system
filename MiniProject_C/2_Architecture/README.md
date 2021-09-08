@@ -9,6 +9,7 @@
 
 ## Low level Structure diagram for proposed system
 
-![S](https://user-images.githubusercontent.com/48732301/132459570-8b2a5f46-fbad-46d4-8cc1-e3b6d95a89de.jpg)
+![S](https://user-images.githubusercontent.com/48732301/132462496-7955be71-3ab8-4291-a69f-37906e0fa2e3.jpg)
+
 
 
